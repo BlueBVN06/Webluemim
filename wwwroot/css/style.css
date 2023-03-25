@@ -1,132 +1,84 @@
-/*--------------------------------------------------------------
-TABLE OF CONTENT
-----------------------------------------------------------------
-1.0 VARIABLE
-|  1.1 COLOR
-|  1.2 TYPOGRAPHY
-|  1.3 LAYOUT
-2.0 FOUNDATION
-3.0 TYPOGRAPHY
-4.0 IMAGE
-5.0 LAYOUT
-6.0 COMPONENT
-|  6.1 CTA
-|  6.2 BUTTON
-|  6.3 TOGGLE
-|  6.4 CARD
-|  6.5 LIST
-7.0 SECTION
-|  7.1 HEADER
-|  7.2 HERO
-|  7.3 CUSTOMER
-|  7.4 FEATURE
-|  7.5 TESTIMONIAL
-|  7.6 PRICING
-|  7.7 FAQ
-|  7.8 CLOSE
-|  7.9 FOOTER
-8.0 MEDIA
-|  8.1 768PX
-|  8.2 1024PX
-|  8.3 1200PX
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-1.0 VARIABLE
---------------------------------------------------------------*/
-
 :root {
-
-  /*------------------------------------------------------------
+    /*------------------------------------------------------------
   |
   | 1.1 COLOR
   |
   ------------------------------------------------------------*/
 
-  --ui-color-brand: #353535;
+    --ui-color-brand: #353535;
+    /* COLOR PALETTE */
 
-  /* COLOR PALETTE */
+    --ui-color-n-000: #fff;
+    --ui-color-n-050: #f5f5f5;
+    --ui-color-n-100: #ebebeb;
+    --ui-color-n-300: #aeaeae;
+    --ui-color-n-500: #353535;
+    --ui-color-n-700: #282828;
+    --ui-color-n-900: #1a1a1a;
+    /* BACKGROUND COLOR */
 
-  --ui-color-n-000: #fff;
-  --ui-color-n-050: #f5f5f5;
-  --ui-color-n-100: #ebebeb;
-  --ui-color-n-300: #aeaeae;
-  --ui-color-n-500: #353535;
-  --ui-color-n-700: #282828;
-  --ui-color-n-900: #1a1a1a;
+    --ui-color-background-primary: var(--ui-color-n-000);
+    --ui-color-background-secondary: var(--ui-color-n-050);
+    --ui-color-background-tertiary: var(--ui-color-n-100);
+    /* BORDER COLOR */
 
-  /* BACKGROUND COLOR */
-  
-  --ui-color-background-primary  : var(--ui-color-n-000);
-  --ui-color-background-secondary: var(--ui-color-n-050);
-  --ui-color-background-tertiary : var(--ui-color-n-100);
+    --ui-color-border: var(--ui-color-n-100);
+    /* TYPOGRAPHY COLOR */
 
-  /* BORDER COLOR */
-
-  --ui-color-border: var(--ui-color-n-100);
-
-  /* TYPOGRAPHY COLOR */
-
-  --ui-color-typography-heading: var(--ui-color-n-500);
-  --ui-color-typography-body   : var(--ui-color-n-900);
-  --ui-color-typography-note   : var(--ui-color-n-300);
-  --ui-color-typography-button : var(--ui-color-n-000);
-
-  /*------------------------------------------------------------
+    --ui-color-typography-heading: var(--ui-color-n-500);
+    --ui-color-typography-body: var(--ui-color-n-900);
+    --ui-color-typography-note: var(--ui-color-n-300);
+    --ui-color-typography-button: var(--ui-color-n-000);
+    /*------------------------------------------------------------
   |
   | 1.2 TYPOGRAPHY
   |
   ------------------------------------------------------------*/
+    --ui-typography-typeface: 'Poppins', sans-serif;
+    /*--ui-typography-typeface: 'adobe-clean', 'Adobe Clean', 'Trebuchet MS', sans-serif;
+    --body-serif-font-family: 'adobe-clean-serif', 'Adobe Clean Serif', serif;*/
+    --body-font-weight: normal;
+    /* FONT SIZE */
 
-  --ui-typography-typeface: "Inter", sans-serif;
+    --ui-typography-h1: 1.9375rem;
+    --ui-typography-h2: 1.5625rem;
+    --ui-typography-h3: 1.25rem;
+    --ui-typography-h4: 1rem;
+    --ui-typography-p: 1rem;
+    --ui-typography-s: .8125rem;
+    /* LEADING */
 
-  /* FONT SIZE */
+    --ui-typography-h1-leading: 1.2;
+    --ui-typography-h2-leading: 1.2;
+    --ui-typography-h4-leading: 1.25;
+    --ui-typography-p-leading: 1.5;
+    /* MARGIN */
 
-  --ui-typography-h1: 1.9375rem;
-  --ui-typography-h2: 1.5625rem;
-  --ui-typography-h3: 1.25rem;
-  --ui-typography-h4: 1rem;
-  --ui-typography-p : 1rem;
-  --ui-typography-s : .8125rem;
-
-  /* LEADING */
-
-  --ui-typography-h1-leading: 1.2;
-  --ui-typography-h2-leading: 1.2;
-  --ui-typography-h4-leading: 1.25;
-  --ui-typography-p-leading : 1.5;
-
-  /* MARGIN */
-
-  --ui-typography-margin-heading: .75rem;
-  --ui-typography-margin-body   : 1.125rem;
-
-  /*------------------------------------------------------------
+    --ui-typography-margin-heading: .75rem;
+    --ui-typography-margin-body: 1.125rem;
+    /*------------------------------------------------------------
   |
   | 1.3 LAYOUT
   |
   ------------------------------------------------------------*/
-  
-  --ui-layout-container: 1.25rem;
-  --ui-layout-grid     : 3.625rem;
-  --ui-layout-gutter   : 1rem;
 
-  /* GAP */
-  
-  --ui-gap-header  : 1rem;
-  --ui-gap-cta     : .75rem;
-  --ui-gap-hero    : 2rem;
-  --ui-gap-customer: 2rem;
-  --ui-gap-card    : 1.25rem;
-  --ui-gap-pricing : 2rem;
-  --ui-gap-faq     : 1.5rem;
+    --ui-layout-container: 1.25rem;
+    --ui-layout-grid: 3.625rem;
+    --ui-layout-gutter: 1rem;
+    /* GAP */
 
-  /* BORDER RADIUS */
-  
-  --ui-radius-avatar: 5rem;
-  --ui-radius-button: 5rem;
-  --ui-radius-card  : .5rem;
+    --ui-gap-header: 1rem;
+    --ui-gap-cta: .75rem;
+    --ui-gap-hero: 2rem;
+    --ui-gap-customer: 2rem;
+    --ui-gap-card: 1.25rem;
+    --ui-gap-pricing: 2rem;
+    --ui-gap-faq: 1.5rem;
+    /* BORDER RADIUS */
 
+    --ui-radius-avatar: 5rem;
+    --ui-radius-button: 5rem;
+    --ui-radius-card: .5rem;
 }
 
 /*--------------------------------------------------------------
@@ -140,16 +92,16 @@ html { box-sizing: border-box; }
 *:after { box-sizing: inherit; }
 
 body {
-  background-color: var(--ui-color-background-primary);
-  color: var(--ui-color-typography-body);
-  font-family: var(--ui-typography-typeface);
-  font-feature-settings: "liga", "kern";
-  font-size: var(--ui-typography-p);
-  font-weight: 400;
-  line-height: var(--ui-typography-p-leading);
-  margin: 0 auto;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
+    background-color: var(--ui-color-background-primary);
+    color: var(--ui-color-typography-body);
+    font-family: var(--ui-typography-typeface);
+    font-feature-settings: "liga", "kern";
+    font-size: var(--ui-typography-p);
+    font-weight: 400;
+    line-height: var(--ui-typography-p-leading);
+    margin: 0 auto;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 /*--------------------------------------------------------------
@@ -163,21 +115,13 @@ body {
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
-body{
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  background: #E3F2FD;
-}
-
 .download-btn{
   outline: none;
   border: none;
   color: #fff;
   display: flex;
   cursor: pointer;
-  padding: 16px 25px;
+  padding: 12px 20px;
   border-radius: 6px;
   align-items: center;
   white-space: nowrap;
@@ -186,6 +130,7 @@ body{
 }
 .download-btn:hover{
   background: #2382f6;
+  border: none;
 }
 .download-btn.timer{
   color: #000;
@@ -203,9 +148,31 @@ body{
 }
 .download-btn .text{
   font-size: 1.5rem;
-  padding-left: 10px;
+  padding-left: 6px;
+  border: none;
 }
-
+.btn-primary {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    height: 34px;
+    text-align: center;
+    text-size-adjust: 100%;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 58.8438px 17px;
+    transform-origin: 58.8438px 17px;
+    user-select: none;
+    caret-color: rgb(255, 255, 255);
+    background: rgb(51, 122, 183) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgb(46, 109, 164);
+    border-radius: 4px 4px 4px 4px;
+    font: 15px / 21.4286px "minecraft_rusregular", Helvetica, Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 6px 12px;
+}
 .articleSection {
 
   	padding: 101px 0 35px 0;  }
@@ -416,14 +383,6 @@ div label[for=ui-component-toggle__yearly] {
   background-size: 1.125rem;
   list-style: none;
   padding-left: 1.875rem;
-}
-
-.ui-component-list--item-check {
-  background-image: url(https://res.cloudinary.com/uisual/image/upload/assets/icons/check.svg);
-}
-
-.ui-component-list--item-cross {
-  background-image: url(https://res.cloudinary.com/uisual/image/upload/assets/icons/cross.svg);
 }
 
 /*--------------------------------------------------------------
@@ -794,7 +753,7 @@ div label[for=ui-component-toggle__yearly] {
   .ui-layout-grid-3 {
     column-gap: var(--ui-layout-gutter);
     grid-template-columns: repeat(2, 1fr);
-    justify-items: center;del
+    justify-items: center;
   }
 
   .ui-layout-grid-3 div:nth-of-type(3) {
