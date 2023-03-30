@@ -7,11 +7,6 @@
     font-family: "Poppins", sans-serif;
 }
 
-body {
-    min-height: 100%;
-    background: #e3f2fd;
-}
-
 nav {
     position: fixed;
     top: 0;
@@ -39,6 +34,15 @@ nav {
 
 .logo .logo-name {
     color: #333;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.logo-name-color {
+    color: #fff;
+    background: #4A98F7;
+    border-radius: 5px;
+    padding: 0px 4px;
     font-size: 22px;
     font-weight: 500;
 }
