@@ -26,8 +26,7 @@ const initTimer = () => {
 
 downloadBtn.addEventListener("click", initTimer);
 
-const cnPopupOverlay = document.querySelector(".cn-popup-overlay"),
-cnDownloadBtn = document.querySelector(".download-btn-ctm button");
+const cnDownloadBtn = document.querySelector(".download-btn-ctm button");
 
 let counter = cnDownloadBtn?.hasAttribute("data-time")
   ? cnDownloadBtn.dataset.time
