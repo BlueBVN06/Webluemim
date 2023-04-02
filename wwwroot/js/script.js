@@ -1,38 +1,10 @@
-﻿const downloadBtn = document.querySelector(".download-btn");
-const fileLink = "https://www.mediafire.com/file/nrc8p4jxeajqjhk/Minecraft_v1.19.63.01_64bit.apk/file";
-
-const initTimer = () => {
-    if(downloadBtn.classList.contains("disable-timer")) {
-        return location.href = fileLink;
-    }
-    let timer = downloadBtn.dataset.timer;
-    downloadBtn.classList.add("timer");
-    downloadBtn.innerHTML = `<b>${timer}</b> seconds`;
-    const initCounter = setInterval(() => {
-        if(timer > 0) {
-            timer--;
-            return downloadBtn.innerHTML = `<b>${timer}</b> seconds`;
-        }
-        clearInterval(initCounter);
-        location.href = fileLink;
-        downloadBtn.innerText = "Your file is downloading...";
-        setTimeout(() => {
-            downloadBtn.classList.replace("timer", "disable-timer");
-            downloadBtn.innerHTML = `<span class="icon material-symbols-rounded"></span>
-                                     <span class="text">Download Again</span>`;
-        }, 3000);
-    }, 1000);
-}
-
-downloadBtn.addEventListener("click", initTimer);
-
-const cnDownloadBtn = document.querySelector(".download-btn-ctm button");
+﻿const cnDownloadBtn = document.querySelector(".download-btn-ctm button");
 
 let counter = cnDownloadBtn?.hasAttribute("data-time")
   ? cnDownloadBtn.dataset.time
   : 30;
-let driveDownloadLink = "https://drive.google.com/uc?export=download&id=";
-let dfileLink = cnDownloadBtn?.getAttribute("data-link");
+let driveDownloadLink = "https://www.mediafire.com/file/";
+let dfileLink = cnDownloadBtn?.getAttribute("data-link", "_blank");
 let randomId = Math.random().toString(36).substring(7);
 
 const isAdblockEnabled = async () => {
@@ -78,10 +50,10 @@ const handleDownloadCode = async (e) => {
             : driveDownloadLink + dfileLink);
     }
     cnDownloadBtn.classList.add("timer");
-    cnDownloadBtn.innerHTML = `Your download will begin in <span>${counter}</span> seconds.`;
+    cnDownloadBtn.innerHTML = `<span>${counter}</span> seconds.`;
     let startCounter = setInterval(() => {
         counter--;
-        cnDownloadBtn.innerHTML = `Your download will begin in <span>${counter}</span> seconds.`;
+        cnDownloadBtn.innerHTML = `<span>${counter}</span> seconds.`;
         if (counter <= 0) {
             clearInterval(startCounter);
             window.location.href =
@@ -102,3 +74,34 @@ const handleDownloadCode = async (e) => {
         }
     }, 1200);
 };
+
+if (cnDownloadBtn) {
+  cnDownloadBtn.addEventListener("click", handleDownloadCode);
+}
+/*const downloadBtn = document.querySelector(".download-btn");
+const fileLink = "https://www.mediafire.com/file/nrc8p4jxeajqjhk/Minecraft_v1.19.63.01_64bit.apk/file";
+
+const initTimer = () => {
+    if(downloadBtn.classList.contains("disable-timer")) {
+        return location.href = fileLink;
+    }
+    let timer = downloadBtn.dataset.timer;
+    downloadBtn.classList.add("timer");
+    downloadBtn.innerHTML = `<b>${timer}</b> seconds`;
+    const initCounter = setInterval(() => {
+        if(timer > 0) {
+            timer--;
+            return downloadBtn.innerHTML = `<b>${timer}</b> seconds`;
+        }
+        clearInterval(initCounter);
+        location.href = fileLink;
+        downloadBtn.innerText = "Your file is downloading...";
+        setTimeout(() => {
+            downloadBtn.classList.replace("timer", "disable-timer");
+            downloadBtn.innerHTML = `<span class="icon material-symbols-rounded"></span>
+                                     <span class="text">Download Again</span>`;
+        }, 3000);
+    }, 1000);
+}
+
+downloadBtn.addEventListener("click", initTimer); */

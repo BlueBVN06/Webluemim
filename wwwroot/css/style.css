@@ -97,7 +97,18 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
-.download-btn{
+
+.download-btn-ctm{ width: 100%; text-align: center; }
+.download-btn-ctm button{ font-family: 'Poppins', sans-serif !important; color: #fff; padding: 11px 30px; font-size: 18px; font-weight: 500; background: #4070f4; border: none; outline: none; border-radius: 4px; border-bottom: 2px solid rgba(0,0,0,0.1); cursor: pointer;}
+.download-btn-ctm button:hover{ background: #0e4bf1; }
+.download-btn-ctm button i{ margin-right: 10px; }
+.download-btn-ctm button span{ color: #4070f4; font-weight: 600; }
+.download-btn-ctm button.timer{font-size: 1.6rempx !important; color: #000000!important; font-weight: 500; background: none; padding: 0; border-bottom: 0px; pointer-events: none; }
+.download-btn-ctm button.timer i{ display: none; }
+.download-btn-ctm button span.timer{font-size: 1.6rem; color: #4070f4; font-weight: 600; }
+.download-btn-ctm button{padding: 5px 15px; font-size: 16px;}
+/*
+.download-btn:{
   outline: none;
   border: none;
   color: #fff;
@@ -132,7 +143,7 @@ body {
   font-size: 1.5rem;
   padding-left: 5px;
   border: none;
-}
+} */
 .articleSection {
 
   	padding: 101px 0 35px 0;  }
