@@ -4,7 +4,7 @@ let counter = cnDownloadBtn?.hasAttribute("data-time")
   ? cnDownloadBtn.dataset.time
   : 30;
 let driveDownloadLink = "https://www.mediafire.com/file/";
-let dfileLink = cnDownloadBtn?.getAttribute("data-link", "_blank");
+let dfileLink = cnDownloadBtn?.getAttribute("data-link");
 let randomId = Math.random().toString(36).substring(7);
 
 const isAdblockEnabled = async () => {
