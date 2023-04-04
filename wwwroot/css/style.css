@@ -1,7 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
 :root {
+    /*------------------------------------------------------------
+  |
+  | 1.1 COLOR
+  |
+  ------------------------------------------------------------*/
+
     --ui-color-brand: #353535;
+    /* COLOR PALETTE */
+
     --ui-color-n-000: #fff;
     --ui-color-n-050: #f5f5f5;
     --ui-color-n-100: #ebebeb;
@@ -28,13 +34,13 @@
   | 1.2 TYPOGRAPHY
   |
   ------------------------------------------------------------*/
-    --ui-typography-typeface: "Poppins", sans-serif;
+    --ui-typography-typeface: 'Poppins', sans-serif;
     /*--ui-typography-typeface: 'adobe-clean', 'Adobe Clean', 'Trebuchet MS', sans-serif;
     --body-serif-font-family: 'adobe-clean-serif', 'Adobe Clean Serif', serif;*/
     --body-font-weight: normal;
     /* FONT SIZE */
 
-    --ui-typography-h1: 3rem;
+    --ui-typography-h1: 1.9375rem;
     --ui-typography-h2: 1.5625rem;
     --ui-typography-h3: 1.25rem;
     --ui-typography-h4: 1rem;
@@ -87,9 +93,8 @@ html { box-sizing: border-box; }
 body {
     background-color: var(--ui-color-background-primary);
     color: var(--ui-color-typography-body);
-    font-family: 'adobe-clean', 'Adobe Clean', 'Trebuchet MS', sans-serif;
-    /*font-family: var(--ui-typography-typeface);*/
-    font-feature-settings: "liga", "kern";
+    font-family: var(--ui-typography-typeface);
+    /*font-feature-settings: "liga", "kern";*/
     font-size: var(--ui-typography-p);
     font-weight: 400;
     line-height: var(--ui-typography-p-leading);
@@ -97,18 +102,24 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 .download-btn-ctm{ width: 100%; text-align: center; }
 .download-btn-ctm button{ font-family: 'Poppins', sans-serif !important; color: #fff; padding: 11px 30px; font-size: 18px; font-weight: 500; background: #4070f4; border: none; outline: none; border-radius: 4px; border-bottom: 2px solid rgba(0,0,0,0.1); cursor: pointer;}
 .download-btn-ctm button:hover{ background: #0e4bf1; }
 .download-btn-ctm button i{ margin-right: 0px; }
 .download-btn-ctm button span{ color: #4070f4; font-weight: 600; }
-.download-btn-ctm button.timer{font-size: 25px !important; color: #000000!important; font-weight: 500; background: none; padding: 0; border-bottom: 0px; pointer-events: none; }
+.download-btn-ctm button.timer{font-size: 22px !important; color: #000000!important; font-weight: 500; background: none; padding: 0; border-bottom: 0px; pointer-events: none; }
 .download-btn-ctm button.timer i{ display: none; }
-.download-btn-ctm button span.timer{font-size: 24px; color: #4070f4; font-weight: 600; }
+.download-btn-ctm button span.timer{font-size: 25px; color: #4070f4; font-weight: 600; }
 .download-btn-ctm button{padding: 5px 15px; font-size: 25px;}
 /*
-.download-btn:{
+.download-btn{
   outline: none;
   border: none;
   color: #fff;
@@ -143,6 +154,28 @@ body {
   font-size: 1.5rem;
   padding-left: 5px;
   border: none;
+}
+.btn-primary {
+    box-sizing: border-box;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    height: 34px;
+    text-align: center;
+    text-size-adjust: 100%;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+    column-rule-color: rgb(255, 255, 255);
+    perspective-origin: 58.8438px 17px;
+    transform-origin: 58.8438px 17px;
+    user-select: none;
+    caret-color: rgb(255, 255, 255);
+    background: rgb(51, 122, 183) none repeat scroll 0% 0% / auto padding-box border-box;
+    border: 1px solid rgb(46, 109, 164);
+    border-radius: 4px 4px 4px 4px;
+    font: 15px / 21.4286px "minecraft_rusregular", Helvetica, Arial, sans-serif;
+    outline: rgb(255, 255, 255) none 0px;
+    padding: 6px 12px;
 } */
 .articleSection {
 
@@ -170,23 +203,18 @@ h1,
 h2,
 h4,
 p,
-ul {margin-top: 0;
-}
+ul { margin-top: 0; }
 
 h1,
 h2,
-h4 { color: var(--ui-color-typography-heading);
-}
+h4 { color: var(--ui-color-typography-heading); }
 
 h1,
-h2 { margin-bottom: var(--ui-typography-margin-heading);
-}
+h2 { margin-bottom: var(--ui-typography-margin-heading); }
 
 h1 {
-    font-family: 'adobe-clean', 'Adobe Clean', 'Trebuchet MS', sans-serif;
-    /*font-family; "Poppins", sans-serif*/
-    font-size: var(--ui-typography-h1);
-    line-height: var(--ui-typography-h1-leading);
+  font-size: var(--ui-typography-h1);
+  line-height: var(--ui-typography-h1-leading);
 }
 
 h2 {
@@ -336,10 +364,10 @@ div label[for=ui-component-toggle__yearly] {
 --------------------------------------------------------------*/
 
 .ui-component-card {
-  border: .1rem solid var(--ui-color-border);
+  border: .0625rem solid var(--ui-color-border);
   border-radius: var(--ui-radius-card);
   overflow: hidden;
-  width: 98%;
+  width: 100%;
 }
 
 /*--------------------------------------------------------------
@@ -500,7 +528,7 @@ div label[for=ui-component-toggle__yearly] {
 
 /* CARD */
 
-/*.ui-component-card--feature { text-align: center; }*/
+.ui-component-card--feature { text-align: center; }
 
 .ui-component-card--feature-content { padding: 2.25rem 1.5rem; }
 
@@ -567,6 +595,23 @@ div label[for=ui-component-toggle__yearly] {
   font-size: var(--ui-typography-h1);
   font-weight: 700;
 }
+
+/* AMOUNT */
+
+.ui-component-card--pricing-amount-1::before { content: "$5"; }
+
+#ui-component-toggle__yearly:checked ~ div
+.ui-component-card--pricing-amount-1::before { content: "$3"; }
+
+.ui-component-card--pricing-amount-2::before { content: "$15"; }
+
+#ui-component-toggle__yearly:checked ~ div
+.ui-component-card--pricing-amount-2::before { content: "$13"; }
+
+.ui-component-card--pricing-amount-3::before { content: "$25"; }
+
+#ui-component-toggle__yearly:checked ~ div
+.ui-component-card--pricing-amount-3::before { content: "$23"; }
 
 /* LIST */
 
@@ -716,6 +761,7 @@ div label[for=ui-component-toggle__yearly] {
   }
 
   .ui-layout-grid-3 div:nth-of-type(3) {
+    left: calc(50% + (var(--ui-layout-gutter) / 2));
     position: relative;
   }
 
