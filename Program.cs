@@ -1,7 +1,10 @@
+using Microsoft.Extensions.FileProviders;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDirectoryBrowser();
 
 var app = builder.Build();
 
@@ -15,6 +18,19 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+IApplicationBuilder applicationBuilder = app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(
+            Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")),
+                });
+
+                app.UseDirectoryBrowser(new DirectoryBrowserOptions
+                {
+                    FileProvider = new PhysicalFileProvider(
+                            Path.Combine(Directory.GetCurrentDirectory(), "wwwroot")),
+                                RequestPath = "/wwwroot"
+                                });
 
 app.UseRouting();
 

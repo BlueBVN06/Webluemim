@@ -194,6 +194,64 @@ body {
     color: #000000;
     padding: 1rem;
 }
+.article-body img {
+    height: auto;
+    max-width: 100%;
+}
+
+.article-body ul, .article-body ol {
+    padding-left: 20px;
+    list-style-position: outside;
+    margin: 20px 0 20px 20px;
+}
+
+[dir="rtl"] .article-body ul, [dir="rtl"] .article-body ol {
+    padding-right: 20px;
+    padding-left: 0;
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+.article-body ul > ul, .article-body ol > ol, .article-body ol > ul, .article-body ul > ol, .article-body li > ul, .article-body li > ol {
+    margin: 0;
+}
+
+.article-body ul {
+    list-style-type: disc;
+}
+
+.article-body a:visited {
+    /*color: #002412;*/
+    color: rgba(1, 137, 68, 1);
+}
+
+.article-body code {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 0 5px;
+    margin: 0 2px;
+}
+
+.article-body pre {
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 10px 15px;
+    overflow: auto;
+    white-space: pre;
+}
+
+.article-body blockquote {
+    border-left: 1px solid #ddd;
+    color: #666;
+    font-style: italic;
+    padding: 0 15px;
+}
+
+.article-body > p:last-child {
+    margin-bottom: 0;
+}
 a {
   color: var(--ui-color-brand);
   text-decoration-color: var(--ui-color-typography-note);
@@ -761,7 +819,6 @@ div label[for=ui-component-toggle__yearly] {
   }
 
   .ui-layout-grid-3 div:nth-of-type(3) {
-    left: calc(50% + (var(--ui-layout-gutter) / 2));
     position: relative;
   }
 
