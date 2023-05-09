@@ -8,6 +8,31 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="div">What does the fox say?</div>
+    <style>
+        .columns{
+          justify-items: center;
+          margin-left:-.75rem;
+          padding-right: 10px;
+          margin: 15px;
+        }
+        .columns.is-mobile{
+          display:flex
+        }
+        .has-text-success{
+          color:#48c78e!important
+        }
+      </style>
+      <div class="columns is-mobile">
+            <div class="column">
+                App By: <br>
+                <b> Mojang</b>
+            </div>
+            <div class="column">Version:<br> <b class="has-text-success">1.19.73.02 </b>for Android </div>
+            <div class="column">
+                    Updated On:<br><b>
+                        May 01, 2023
+                    </b>
+            </div>
+        </div>
 </body>
 </html>
