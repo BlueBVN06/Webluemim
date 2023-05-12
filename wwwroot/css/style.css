@@ -194,6 +194,9 @@ body {
     color: #000000;
     padding: 1rem;
 }
+.article-boy {
+  padding: 1rem;
+}
 .article-body img {
     height: auto;
     max-width: 100%;
